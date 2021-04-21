@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<title>Echo</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{{ url_for ('static',filename='css/textspeech.css')}}">
+<style>
+
+.input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  background-color: #3CBC8D;
+  color: white;
+}
+
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image:url({{url_for('static',filename='images/8.jpg')}});
+  min-height: 110%;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card" id="myNavbar">
+    <a href="{{url_for('index') }}" class="w3-bar-item w3-button w3-wide">ECHO</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button"><i class="fa fa-th"></i> GET STARTED</a>
+      </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-left w3-text-white" style="padding:100px">
+
+        <div class="w3-display-top">
+    <h1 class="w3-jumbo w3-animate-top">TEXT TO SPEECH</h1>
+    <hr class="w3-border-grey" style="margin:auto;width:60%">
+   <br>
+            <br>
+  </div>
+        <main>
+          <form class="input" id="voice-form" method="post">
+                <div class="field">
+                    <label for="speech"><h3>Type Something</h3></label>
+                    <input type="text" name="speech" id="speech" required />
+                </div>
+              <br>
+                <div class="field" >
+                    <label for="voices"><h3>Choose a Voice Assistant</h3></label>
+                      <select name="voices" id="voices">
+                          <option value="Male">Male</option>
+                          <option value="Female">Female</option>
+                      </select>
+                </div>
+              <br>
+              <button class="button button2"><b>SAY IT ! </b></button>
+
+          </form>
+        </main>
+  </div>
+</header>
+</body>
+</html>
+
+
+

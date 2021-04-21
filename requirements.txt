@@ -1,0 +1,16 @@
+click==7.1.2
+comtypes==1.1.9
+Flask==1.1.2
+Flask-Cors==3.0.10
+Flask-WTF==0.14.3
+itsdangerous==1.1.0
+Jinja2==2.11.3
+MarkupSafe==1.1.1
+pypiwin32==223
+python-dotenv==0.17.0
+pyttsx3==2.90
+pywin32==300
+six==1.15.0
+SpeechRecognition==2.2.0
+Werkzeug==1.0.1
+WTForms==2.3.3
